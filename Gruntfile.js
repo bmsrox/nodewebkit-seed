@@ -42,11 +42,11 @@ module.exports = function( grunt ) {
 
     nwjs: {
       options: {
-          files: ['!build', '!.sass-cache', '!node_modules', '!Gruntfile.js'],
-          platforms: ['linux64'],
+          platforms: ['linux64', 'win64'],
           buildDir: '../webkitbuilds', // Where the build version of my node-webkit app is saved
+          version: 'v0.12.0',
       },
-      src: ['../neonext/**/*'] // Your node-webkit app
+      src: ['**/**', '!**/node_modules/**', '!**/.sass-*/**', '!**/cache/**' , '!**/build/**' , '!**/Gruntfile.js'],
     },
 
     jade: {
