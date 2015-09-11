@@ -29,7 +29,7 @@ module.exports = function( grunt ) {
         files : [
           'src/js/**/*',
           'src/sass/**/*',
-          'src/dist/**/*',
+          'src/app/**/*',
           'package.json'
         ],
 
