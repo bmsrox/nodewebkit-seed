@@ -1,0 +1,49 @@
+extends layout/frontend
+
+block content
+  //CHAMADA TELA FULLSCREEN
+  //- .call-fullscreen(fullscreen='', data-ng-style='layoutCallFullscreen()', data-ng-show='fullscreenShow')
+  //-   .content-full
+  //-    .client(data-ng-class='hideOnlyPassOrPoint()')
+  //-        h3(data-ng-style='layoutCallFullscreenSubTitles()') {{ clientName }}
+  //-    .pass(data-ng-class='interface("pass")')
+  //-        h1(data-ng-style='layoutCallFullscreenLabel()') {{ labelPass }}
+  //-        h2 {{ password }}
+  //-    .point(data-ng-class='interface("point")')
+  //-        h1(data-ng-style='layoutCallFullscreenLabel()') {{ labelPoint }}
+  //-        h2 {{ point }}
+  //-    .queue(data-ng-class='hideOnlyPassOrPoint()')
+  //-        h3(data-ng-style='layoutCallFullscreenSubTitles()') {{ queueName }}
+
+  //TELA PRINCIPAL
+  .container.clearfix
+      .header(data-ng-style='layoutHeader()', header='')
+          h1
+              img(data-ng-src='{{logo}}')
+      .sidebar(data-ng-style='layoutSidebar()', sidebar='')
+          .box(data-ng-style='layoutSiderBarBox()', data-ng-class='interface("pass")')
+            .row
+                .contents
+                    .labels(data-ng-style='layoutSiderBarBoxLabel()') SENHA
+                    .values A0001
+          .box(data-ng-style='layoutSiderBarBox()', data-ng-class='interface("point")')
+            .row
+                .contents
+                    .labels(data-ng-style='layoutSiderBarBoxLabel()') CONSULTÓRIO
+                    .values 01
+      .content(data-ng-style='layoutContent()', content='')
+          .player
+              video(autoplay='autoplay', id='videos')
+                //  source(src='/videos/nodejs.mp4', type='video/mp4')
+      .footer(data-ng-style='layoutFooter()', footer='')
+          .row  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit animi sapiente consequuntur? Nulla blanditiis enim iste. Porro suscipit odio enim natus sequi a in, soluta cupiditate, ipsum facilis sunt cum?
+
+  //EXECUTA O AUDIO PARA CHAMADA DE SENHA
+  .voice
+    // DIV PARA EXCUÇÃO DO AUDIO NÃO APAGAR
+    #jquery_jplayer_1.jp-jplayer
+    #jp_container_1.jp-audio(style='display:none;')
+      .jp-type-playlist
+        .jp-playlist
+          ul
+    // DIV PARA EXCUÇÃO DO AUDIO NÃO APAGAR

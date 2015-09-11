@@ -9,31 +9,27 @@ module.exports = function( grunt ) {
 
       scripts : {
         files : {
-          'app/js/main.js' : 'build/js/scripts.js'
+          'dist/js/main.js' : 'src/js/scripts.js'
         }
       }
     }, // uglify
-
-
 
     sass : {
       dist : {
         options : { style : 'compressed' },
         files : {
-          'app/css/style.css' : 'build/sass/style.sass',
-          'app/css/reset.css' : 'build/sass/reset.sass'
+          'dist/css/style.css' : 'src/sass/style.sass',
+          'dist/css/reset.css' : 'src/sass/reset.sass'
         }
       }
     }, // sass
 
-
-
     watch : {
       dist : {
         files : [
-          'build/js/**/*',
-          'build/sass/**/*',
-          'build/app/**/*'
+          'src/js/**/*',
+          'src/sass/**/*',
+          'src/dist/**/*'
         ],
 
         tasks : [ 'uglify', 'sass', 'jade' ]
@@ -42,11 +38,11 @@ module.exports = function( grunt ) {
 
     nwjs: {
       options: {
-          platforms: ['linux64', 'win64'],
-          buildDir: '../webkitbuilds', // Where the build version of my node-webkit app is saved
-          version: 'v0.12.0',
+          platforms: ['linux64'],
+          buildDir: './build', // Where the build version of my node-webkit app is saved
+          version: 'v0.12.3',
       },
-      src: ['**/**', '!**/node_modules/**', '!**/.sass-*/**', '!**/cache/**' , '!**/build/**' , '!**/Gruntfile.js'],
+      src: ['**/**', '!**/node_modules/**', '!**/.sass-*/**', '!**/cache/**', '!**/build/**', '!**/src/**', '!**/Gruntfile.js'],
     },
 
     jade: {
@@ -58,13 +54,12 @@ module.exports = function( grunt ) {
                 pretty: true
             },
             files: {
-                'app/index.html':'build/app/index.jade'
+                'dist/index.html':'src/app/index.jade'
             }
         }
     },
 
   });
-
 
   // Plugins do Grunt
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
@@ -72,7 +67,6 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
   grunt.loadNpmTasks( 'grunt-nw-builder' );
   grunt.loadNpmTasks( 'grunt-contrib-jade' );
-
 
   // Tarefas que serão executadas
   grunt.registerTask( 'default', [ 'uglify', 'sass', 'jade', 'nwjs' ] );
