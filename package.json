@@ -1,7 +1,7 @@
 {
   "name": "neonext",
   "version": "0.0.1",
-  "main": "app://host/app/index.html",
+  "main": "app://host/dist/index.html",
   "window": {
     "toolbar": false,
     "position": "mouse",

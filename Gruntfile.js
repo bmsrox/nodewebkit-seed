@@ -29,10 +29,11 @@ module.exports = function( grunt ) {
         files : [
           'src/js/**/*',
           'src/sass/**/*',
-          'src/dist/**/*'
+          'src/dist/**/*',
+          'package.json'
         ],
 
-        tasks : [ 'uglify', 'sass', 'jade' ]
+        tasks : [ 'uglify', 'sass', 'jade', 'nwjs' ]
       }
     }, // watch
 
