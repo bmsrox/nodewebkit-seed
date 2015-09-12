@@ -1,0 +1,19 @@
+{
+  "name": "nodewebkit",
+  "version": "0.0.1",
+  "authors": [
+    "bmsrox <bmsrox@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "4.3.0",
+    "jquery": "~2.1.4"
+  }
+}

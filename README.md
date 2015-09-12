@@ -1,5 +1,20 @@
-Testing app with node-webkit
+Node-webkit seed
 ============================
+
+###Dependencies
+
+you'll need to install Ruby first
+
+	sudo apt-get install ruby-full
+
+after install Sass
+
+	sudo su -c "gem install sass"
+
+Install Grunt and Bower
+
+	npm install -g grunt
+	npm install -g bower
 
 run into project folder
 
@@ -7,4 +22,4 @@ run into project folder
 
 after
 
-	grunt
+	grunt w OR grunt
