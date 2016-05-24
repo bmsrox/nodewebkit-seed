@@ -1,5 +1,5 @@
 {
-  "name": "neonext",
+  "name": "my-app",
   "version": "0.0.1",
   "main": "app://host/dist/index.html",
   "window": {
